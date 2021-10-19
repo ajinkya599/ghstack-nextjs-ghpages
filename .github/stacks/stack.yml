@@ -39,12 +39,12 @@ configs:                                               # stack config applied to
         require-code-owner-reviews: true
 
   environments:                                        # environment configs for new repository
-  - name: production
-    parameters:
-      protected-branches: true
+    - name: production
+      parameters:
+        protected-branches: true
         
 github-apps:                                           # github apps configured on new repository
 - slug: greenkeeper
 
 init:
-- uses: ".github/workflows/stack-init.yaml"
+  uses: ".github/workflows/stack-init.yaml"
