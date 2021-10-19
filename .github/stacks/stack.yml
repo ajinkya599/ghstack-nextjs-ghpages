@@ -1,7 +1,7 @@
 version: 0.1.0                                            # stack schema version 0.1.0 (latest)
 
-name: A stack             # stack name 
-description: A stack to deploy Next.js site to GitHub pages       # stack description
+name: Deploy Next.js site to GitHub pages             # stack name 
+description: Deploy Next.js site to GitHub pages       # stack description
 
 branding:                                              # stack branding 
  icon: 'package'
