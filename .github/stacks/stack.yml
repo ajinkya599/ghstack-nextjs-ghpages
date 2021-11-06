@@ -20,31 +20,33 @@ inputs:                                                # stack inputs
     required: true
     is_secret: true
 
-configs:                                               # stack config applied to new repository
+configs:
   repo-metadata:
     parameters:
       description: 'NextJS + GitHub pages'
       secrets: 
         - name: GH_PAT
           value: {{inputs.GITHUB_PAT}}
-      topics:                                            # repository tags for new repository
+      topics:
       - nextjs
       - github-pages
 
-  branches:                                            # branching configs for new repository
+  branches:
     - name: main
       parameters:
-        dismiss-stale-reviews: true                      # default: false
-        required-approving-review-count: 1
-        require-code-owner-reviews: true
+        enforce-admins: true
+        required-pull-request-reviews:
+          dismiss-stale-reviews: true
+          required-approving-review-count: 1
+          require-code-owner-reviews: true
 
-  environments:                                        # environment configs for new repository
+  environments:
     - name: production
       parameters:
         protected-branches: true
         
-github-apps:                                           # github apps configured on new repository
+github-apps:
 - slug: greenkeeper
 
 init:
-  uses: ".github/workflows/stack-init.yaml"
+  uses: "stack-init.yaml"
