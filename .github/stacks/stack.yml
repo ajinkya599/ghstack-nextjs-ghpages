@@ -25,7 +25,7 @@ configs:
     parameters:
       secrets: 
       - name: GH_PAT
-        value: {{inputs.GITHUB_PAT}}
+        value: ${{inputs.GITHUB_PAT}}
       topics:
       - nextjs
       - github-pages
