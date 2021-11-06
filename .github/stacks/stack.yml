@@ -23,10 +23,9 @@ inputs:                                                # stack inputs
 configs:
   repo-metadata:
     parameters:
-      description: 'NextJS + GitHub pages'
       secrets: 
-        - name: GH_PAT
-          value: {{inputs.GITHUB_PAT}}
+      - name: GH_PAT
+        value: {{inputs.GITHUB_PAT}}
       topics:
       - nextjs
       - github-pages
