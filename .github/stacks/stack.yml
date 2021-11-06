@@ -23,7 +23,6 @@ inputs:                                                # stack inputs
 configs:
   repo-metadata:
     parameters:
-      description: 'NextJS app on GH pages'
       secrets: 
       - name: GH_PAT
         value: ${{inputs.GITHUB_PAT}}
