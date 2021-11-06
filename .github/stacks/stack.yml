@@ -18,7 +18,7 @@ inputs:                                                # stack inputs
   - name: GITHUB_PAT
     description: GitHub PAT with repo and workflow permissions
     required: true
-    is_secret: true
+    is-secret: true
 
 configs:
   repo-metadata:
